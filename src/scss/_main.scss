@@ -1,0 +1,204 @@
+.content {
+    h1 {
+        @extend %heading-level1;
+        margin: 0 0 20px 290px;
+    }
+}
+.content__wrapper {
+    display: flex;
+
+}
+.search-form {
+    height: 600px;
+    background-color: $white;
+    margin-right: 20px;
+}
+.search-results__nav {
+    display: flex;
+    justify-content: space-between;
+}
+.search-results__item {
+    background-color: $white;
+    margin-bottom: 16px;
+    padding: 16px;
+    display: grid;
+    column-gap: 17px;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: 
+        "img title price"
+        "img description ."
+        "img tags  ."
+    ;
+}
+.select-form {
+    height: 35px;
+    color: $disabled-text;
+}
+.search-results__tags {
+    grid-area: tags;
+    align-self: flex-end;
+    display: flex;
+}
+.search-results__item-img {
+    height: 168px;
+    display: block;
+    grid-area: img;
+}
+.search-results__item-title {
+    grid-area: title;
+    justify-self: start;
+    @extend %heading-level-3;
+    line-height: calc(21.09 / 18 * 100%);
+    a {
+        color: black;
+    }
+}
+.search-results__item-description {
+    grid-area: description;
+    @extend %description;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 75px;
+    line-height: calc(16.41 / 14 * 100%);
+}
+.search-results__item-year {
+    grid-area: year;
+    @extend %tag;
+}
+.search-results__item-run {
+    grid-area: run;
+    @extend %tag;
+}
+.search-results__item-size {
+    grid-area: size;
+    @extend %tag;
+}
+.search-results__item-price {
+    grid-area: price;
+    justify-self: end;
+}
+.search-results__item-param {
+    display: flex;
+    flex-direction: column;
+}
+.search-results__item-value {
+    display: flex;
+    flex-direction: column;
+}
+.search-form {
+    padding: 16px 16px 20.68px 16px;
+}
+.search-form__header {
+    @extend %heading-level-4;
+    margin-bottom: 16.5px;
+    height: 19px;
+}
+.block__title {
+    color: $black;
+    position: relative;
+    margin-bottom: 11px;
+    margin-top: 14.5px;
+    height: 19px;
+    &::before,
+    &::after {
+        content: ' ';
+        width: 10px;
+        height: 1px;
+        background-color: #828282;
+        position: absolute;
+        top: 10px;
+    }
+    &::before {
+        transform: rotate(40deg);
+        right: 7px;
+    }
+    &::after {
+        transform: rotate(-40deg);
+        right: 0px;
+    }
+}
+.block__checkbox {
+    @extend %default-checkbox;
+    position: relative;
+    top: 1px;
+    &:checked {
+        @extend %checked-checkbox;
+    }
+    &:checked::before {
+        content: '';
+        height: 2px;
+        width: 6px;
+        background-color: $white;
+        position: absolute;
+        transform: rotate(40deg);
+        top: 7px;
+        left: 3px;
+    }
+    &:checked::after {
+        content: '';
+        height: 2px;
+        width: 10px;
+        background-color: $white;
+        position: absolute;
+        transform: rotate(-50deg);
+        top: 6px;
+        right: 0;
+    }
+}
+
+.block__radio {
+    @extend %default-radio;
+    position: relative;
+    top: 1px;
+    &:checked {
+        @extend %checked-radio;
+    }
+}
+.block__param {
+    label {
+        color: $default-text
+    }
+}
+input, select {
+    padding: 7px 8px;
+    border: 1px solid $borders;
+    cursor: pointer;
+    &:focus {
+        border: 1px solid $border-blue;
+        outline: none;
+    }
+}
+input[placeholder="min"],
+input[placeholder="max"] {
+    width: 112px;
+    height: 35px;
+}
+input[placeholder="max"] {
+    margin-left: 10px;
+}
+input[placeholder="keyword"] {
+    width: 238px;
+    height: 35px;
+}
+.param + .param {
+    margin-top: 9px;
+}
+.param > label {
+    height: 19px;
+}
+.search-form__button {
+    @extend %primary-button;
+    border: none;
+    width: 238px;
+    min-height: 34.47px;
+    margin-top: 10px;
+    &:hover {
+        @extend %primary-hover;
+    }
+    &:active {
+        @extend %primary-active
+    }
+}
+.main__text {
+    line-height: calc(20.21 / 16 * 100%);
+}

@@ -1,0 +1,52 @@
+%heading-level1 {
+    font: {
+        size: 1.375rem;
+        weight: 700;
+    }
+}
+%heading-level-2 {
+    font: {
+        size: 1.25rem;
+        weight: 700;
+    }
+}
+%heading-level-3 {
+    font: {
+        size: 1.125rem;
+        weight: 500;
+    }
+}
+%heading-level-4 {
+    font: {
+        size: 1rem;
+        weight: 500
+    }
+}
+%description {
+    color: $disabled-text;
+    font: {
+        size: 0.875rem;
+        weight: 300;
+    }
+}
+%link {
+    text-decoration: none;
+    color: $link;
+}
+%link-hover {
+    color: $link-hover;
+    text-decoration: underline;
+}
+%tag {
+    height: 24px;
+    background-color: $tag;
+    text-align: center;
+    margin-right: 16px;
+    padding: 5px;
+    justify-self: start;
+    color: $white;
+    font: {
+        size: 0.75rem;
+        weight: 300;
+    }
+}

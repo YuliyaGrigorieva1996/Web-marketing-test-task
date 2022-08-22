@@ -1,0 +1,111 @@
+.footer__content {
+    display: flex; 
+    div {
+        color: $default-text;
+    } 
+}
+
+.footer__contacts {
+    background-color: $white;
+    padding: 39px 13px 24px 19px;
+    height: 243px;
+}
+.footer__adress {
+   display: flex;
+   max-height: 50px;
+   min-width: 226px;
+   img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+   }
+}
+.footer__phone {
+    margin-top: 20px;
+    img{
+      width: 22px;
+        height: 22px;
+        object-fit: contain;  
+    }  
+    a {
+        text-decoration: none;
+        color: $default-text;
+    }
+}
+.footer__social-media {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    div {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $disabled-text;
+        border-radius: 50%;
+        position: relative;
+    }
+    div:hover {
+        background-color: $body-background;
+    }
+    img {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+        position: absolute;
+        top: 5px;
+        left: 7px;
+    }
+}
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+    img {
+        position: relative;
+        bottom: 3px;
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+    }
+}
+.footer-contact-info {
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 290px;
+    .fotter__logo {
+        object-fit: contain;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        font: {
+            size: 1.125rem;
+            weight: 700;
+            color: $black;
+        }
+    }
+    div {
+        font: {
+            size: 0.875rem;
+            weight: 400;
+            color: $default-text
+        }
+        
+    }
+}
+.footer-link {
+    &:link {
+        @extend %link;
+    }
+    &:visited {
+        color: $link-visited;
+    }
+    &:hover {
+        color: $link-hover;
+        text-decoration: underline;
+    }
+}

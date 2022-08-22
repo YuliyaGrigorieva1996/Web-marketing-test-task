@@ -1,0 +1,57 @@
+@import 'colors';
+
+%primary-button {
+    background-color: $link-hover;
+    color: $white;
+    border: none;
+}
+%primary-hover {
+    border: none;
+    background-color: $link-hover;
+    color: $white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+%primary-active {
+    border: none;
+    background-color: $link-hover;
+    color: $white;
+    box-shadow: inset -2px 2px rgba(0, 0, 0, 0.05);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+}
+%primary-disabled {
+    border: none;
+    background-color: $link-hover;
+    color: #E0E0E0;
+}
+%primary-outlined {
+    background-color: transparent;
+    border: 1px solid $link-hover;
+    color: $link-hover;
+}
+%succes-button {
+    border: none;
+    background-color: #27AE60;
+    color: $white;
+}
+%error-button {
+    border: none;
+    background-color: #EB5757;
+    color: $white;
+}
+%warning-button {
+    background-color: #F2994A;
+    color: $white;
+}
+%default-button {
+    border: none;
+    background-color: $disabled-text;
+    color: $white;
+}
+%dark-button {
+    border: none;
+    background-color: $black;
+    color: $white;
+}
+
+

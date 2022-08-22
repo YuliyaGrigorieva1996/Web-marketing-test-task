@@ -1,0 +1,54 @@
+@import "../../node_modules/bootstrap/scss/functions";
+$blue: #2F80ED; 
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+.header {
+    margin-top: 40px;
+    background-color: $white;
+}
+.header__logo {
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    img {
+        object-fit: contain;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}
+.navlinks {
+    background-color: $white;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+        display: block;
+        line-height: calc(19 / 16 * 100%);
+        color: #8D8D8D;
+        margin: 0 16px 0;
+        text-decoration: none;
+    }
+}
+.breadcrumd-wrapper {
+    margin-left: 16px;
+}
+.breadcrumb-item {
+    font: {
+        size: 0.875rem;
+        weight: 400;
+    }
+    a:hover {
+        color: $link-hover;
+    }
+
+}
+.breadcrumb-item.active {
+    color: $default-text;
+} 
